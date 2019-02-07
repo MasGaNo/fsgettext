@@ -1,0 +1,37 @@
+{
+  "name": "fsgettext",
+  "version": "1.0.0",
+  "description": "a gettext implementation for FS.js",
+  "main": "./build/i18n/gettext/index.js",
+  "scripts": {
+    "build:js": "NODE_PATH=./build browserify ./build/index.js -o ./dist/build.js",
+    "daemon": "nodemon ./build/server.js",
+    "start": "concurrently \" npm run watch \" \" sleepms 6000 && npm run daemon \" ",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "concurrently \" npm run watch:ts \" \"sleepms 5000 && npm run watch:js \"",
+    "watch:js": "watch \" npm run build:js \" ./build --filter=watchfilter.js",
+    "watch:ts": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MasGaNo/fsgettext.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MasGaNo/fsgettext/issues"
+  },
+  "homepage": "https://github.com/MasGaNo/fsgettext#readme",
+  "dependencies": {
+    "staticserver": "https://github.com/MasGaNo/staticserver.git"
+  },
+  "devDependencies": {
+    "@types/node": "10.12.21",
+    "browserify": "16.2.3",
+    "concurrently": "4.1.0",
+    "nodemon": "1.18.9",
+    "sleep-ms": "2.0.1",
+    "typescript": "^3.3.1",
+    "watch": "1.0.2"
+  }
+}

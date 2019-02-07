@@ -1,0 +1,12 @@
+# Test FR
+
+msgid "Brand"
+msgstr "Brand"
+
+msgid "Track"
+msgid_plural "plural.Track"
+msgstr[0] "Track"
+msgstr[1] "Tracks"
+
+msgid "Only for EN"
+msgstr "Just for EN"

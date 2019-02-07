@@ -1,0 +1,9 @@
+# Test FR
+
+msgid "Brand"
+msgstr "Marque"
+
+msgid "Track"
+msgid_plural "plural.Track"
+msgstr[0] "Chanson"
+msgstr[1] "Chansons"
